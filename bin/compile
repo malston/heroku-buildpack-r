@@ -32,7 +32,7 @@ LP_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILDPACK_DIR="$(dirname $(dirname $0))"
 
 # config
-R_VERSION="3.0.2"
+R_VERSION="2.15.3"
 BUILD_PACK_VERSION="20140218-0019"
 
 S3_BUCKET="heroku-buildpack-r"
