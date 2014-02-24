@@ -79,7 +79,7 @@ cp /app/vendor/gcc/lib64/* /app/vendor/R/lib64/R/lib
 export PATH="/app/vendor/R/bin:/app/vendor/gcc/bin:$PATH"
 echo "PATH set to '$PATH'" | indent
 
-export LDFLAGS="-L/app/vendor/gcc/lib64 -L/app/vendor/gsl/lib"
+export LDFLAGS="-L/app/vendor/gcc/lib64 -L/app/vendor/gsl/lib -L/usr/lib64/libreadline.so"
 export CPPFLAGS="-I/app/vendor/glibc/string -I/app/vendor/glibc/time -I/app/vendor/gsl/include"
 export PKG_LDFLAGS=$LDFLAGS
 export PKG_CPPFLAGS=$CPPFLAGS
@@ -91,6 +91,7 @@ echo "R_INCLUDE set to '$R_INCLUDE'" | indent
 
 # copy over environment
 mkdir -p $BUILD_DIR/.profile.d
+echo "Copying $BUILDPACK_DIR/bin/r_environment.sh to $BUILD_DIR/.profile.d/r_environment.sh" | indent
 cp "$BUILDPACK_DIR/bin/r_environment.sh" $BUILD_DIR/.profile.d/r_environment.sh
 
 # prevent warnings when building packages
