@@ -79,7 +79,7 @@ cp /app/vendor/gcc/lib64/* /app/vendor/R/lib64/R/lib
 export PATH="/app/vendor/R/bin:/app/vendor/gcc/bin:$PATH"
 echo "PATH set to '$PATH'" | indent
 
-export LDFLAGS="-L/app/vendor/gcc/lib64 -L/app/vendor/gsl/lib -L/usr/lib64/libreadline.so"
+export LDFLAGS="-L/app/vendor/gcc/lib64 -L/app/vendor/gsl/lib -L/usr/lib64/libreadline.so.6"
 export CPPFLAGS="-I/app/vendor/glibc/string -I/app/vendor/glibc/time -I/app/vendor/gsl/include"
 export PKG_LDFLAGS=$LDFLAGS
 export PKG_CPPFLAGS=$CPPFLAGS
