@@ -169,7 +169,7 @@ echo LD_LIBRARY_PATH=$LD_LIBRARY_PATH
 echo PKG_CONFIG_PATH=$PKG_CONFIG_PATH
 echo ----------------------------------------------------------------------
 
-./configure --prefix=$vendordir/R --with-x --with-libpng --with-cairo --enable-R-shlib && make && make install
+./configure --prefix=$vendordir/R --with-readline=no --with-x --with-libpng --with-cairo --enable-R-shlib && make && make install
 
 popd
 

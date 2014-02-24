@@ -2,7 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     daemons (1.1.9)
-    eventmachine (0.12.10)
+    eventmachine (1.0.1)
     foreman (0.55.0)
       thor (>= 0.13.6)
     rack (1.4.1)
