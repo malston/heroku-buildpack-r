@@ -31,6 +31,9 @@ CACHE_DIR="$2/vendor"
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILDPACK_DIR="$(dirname $(dirname $0))"
 echo "Build dir: $BUILD_DIR" | indent
+echo "Cache dir: $CACHE_DIR" | indent
+echo "lp dir: $LP_DIR" | indent
+echo "Buildpack dir: $BUILDPACK_DIR" | indent
 
 # config
 R_VERSION="3.0.2"
@@ -108,7 +111,7 @@ echo "Executing init.r script" | indent
   r <- getOption("repos");
   r["CRAN"] <- "$CRAN_MIRROR";
   options(repos=r);
-  `cat /home/vcap/app/init.r`
+  `cat /tmp/app/init.r`
 RPROG
 
 echo "R $R_VERSION successfully installed" | indent
