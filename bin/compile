@@ -108,7 +108,7 @@ echo "Executing init.r script" | indent
   r <- getOption("repos");
   r["CRAN"] <- "$CRAN_MIRROR";
   options(repos=r);
-  `ls -al $BUILD_DIR`
+  `ls -al $BUILD_DIR | cat`
   `cat $BUILD_DIR/init.r`
 RPROG
 
