@@ -26,7 +26,7 @@ function indent() {
 unset GIT_DIR
 
 # parse and derive params
-BUILD_DIR=$1
+BUILD_DIR=/tmp/staging/app
 CACHE_DIR="$2/vendor"
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILDPACK_DIR="$(dirname $(dirname $0))"
